@@ -1,0 +1,3 @@
+[submodule "golang-training"]
+	path = golang-training
+	url = https://github.com/noydhiet/golang-training.git
