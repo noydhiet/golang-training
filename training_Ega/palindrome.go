@@ -7,9 +7,8 @@ func main() {
 	var word string
 	fmt.Println("Enter your word: ")
 
-	fmt.Scanf("%d", &word)
+	fmt.Scanf("%s", &word)
 	fmt.Println(isPalindrome(word))
-
 }
 
 func reverse(s string) string {
