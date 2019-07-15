@@ -5,10 +5,18 @@ import "fmt"
 func main() {
 
 	var peserta [4]string
-	names[0] = "trafalgar"
-	names[1] = "d"
-	names[2] = "water"
-	names[3] = "law"
+	peserta[0] = "Inggrid"
+	peserta[1] = "Melanika"
+	peserta[2] = "Jeremi"
+	peserta[3] = "Deardo"
 
-	fmt.Println(names[0], names[1], names[2], names[3])
+	usia := [3]int{1, 2, 3}
+
+	// show var usia with looping
+	for i := 0; i < 3; i++ {
+		fmt.Println(usia[i])
+	}
+
+	fmt.Println(peserta[0], peserta[1], peserta[2], peserta[3])
+	fmt.Println("Jumlah index : \t", len(peserta)) // count the index in single array
 }

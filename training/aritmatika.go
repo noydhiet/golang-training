@@ -1,5 +1,7 @@
 package main
 
+// using operator aritmatika to do some calculation
+
 import "fmt"
 
 func main() {
