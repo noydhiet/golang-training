@@ -13,7 +13,6 @@ func main() {
 	fmt.Println("Masukan kata :")
 	fmt.Scanf("%s", &kata)
 
-	// fmt.Println(name)
 	fmt.Println(faktorial(kata))
 }
 
