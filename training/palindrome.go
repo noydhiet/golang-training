@@ -1,29 +1,30 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
 )
 
 func main() {
-	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Enter String :")
-	dataStr, _ := reader.ReadString('\n')
+	var dataStr string
+	fmt.Println("Enter string : ")
+
+	fmt.Scanf("%s", &dataStr)
 	fmt.Println(isPalindrome(dataStr))
 }
 
 func reverse(s string) string {
-	r := []rune(s)
-	for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 {
-		r[i], r[j] = r[j], r[i]
+	b := make([]byte, len(s))
+	var j int = len(s) - 1
+	for i := 0; i <= j; i++ {
+		b[j-i] = s[i]
 	}
-	return string(r)
+
+	return string(b)
 }
 
 func isPalindrome(dataStr string) string {
 	if dataStr == reverse(dataStr) {
-		return "BUKAN PERMUTASI"
+		return "PERMUTASI"
 	}
-	return "PERMUTASI"
+	return "BUKAN PERMUTASI"
 }
