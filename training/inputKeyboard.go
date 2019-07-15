@@ -1,26 +1,29 @@
 package main
-import "fmt"
+
+import (
+	"fmt"
+)
+
+// func main() {
+// 	reader := bufio.NewReader(os.Stdin)
+// 	fmt.Print("Input year :")
+// 	year, _ := reader.ReadString('\n')
+// 	year2, err := strconv.Atoi(year)
+
+// 	if err == nil {
+// 		fmt.Println(year2)
+// 	} else {
+// 		fmt.Println(err)
+// 	}
+
+// 	fmt.Println(year2)
+// }
 
 func main() {
-	
-	// input a number
-	fmt.Println("Enter year: ")
+	var i int
+	fmt.Println("Enter your value : ")
 
-	fmt.Scanf("%d", &i)    // & itu untuk output dan input
+	fmt.Scanf("%d", &i)
 
-	k := 0
-	for j := 1; j <= i; j++ {
-		if  i%j == 0 {
-			k++
-		}
-	}
-	
-	if k == 2 {
-		fmt.Println("Bilangan prima")
-	}
-	else {
-		fmt.Println("Bilangan non prima")
-	}
-
+	fmt.Println(i)
 }
-

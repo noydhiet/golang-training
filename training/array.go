@@ -9,5 +9,6 @@ func main() {
 	//cetak indeks ke dua
 	fmt.Println(peserta[0])
 
-	usia := [3]int 
+	usia := [3]int{1, 2, 3}
+
 }
