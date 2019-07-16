@@ -1,0 +1,50 @@
+[LOG] [2019-07-16 17:10:54] Name Request Hafihd
+[LOG] [2019-07-16 17:10:54] Response Final Message Hello, Hafihd
+[LOG] [2019-07-16 17:25:22] Name Request Hafihd%!(EXTRA string=Laki, string=Jakarta)
+[LOG] [2019-07-16 17:25:22] Response Final Message Hello, Hafihd, Laki, Jakarta
+[LOG] [2019-07-16 17:31:09] Name Request Hafihd%!(EXTRA string=Pria, string=Jakarta)
+[LOG] [2019-07-16 17:31:09] Response Final Message Hi Mr. Hafihd
+[LOG] [2019-07-16 17:31:19] Name Request Hafihd%!(EXTRA string=Wanita, string=Jakarta)
+[LOG] [2019-07-16 17:31:19] Response Final Message Hi Mrs. Hafihd
+[LOG] [2019-07-16 17:31:28] Name Request Hafihd%!(EXTRA string=Wanita, string=Bandung)
+[LOG] [2019-07-16 17:31:28] Response Final Message Wilujeng Mrs. Hafihd
+[LOG] [2019-07-16 17:31:37] Name Request Hafihd%!(EXTRA string=Wanita, string=Medan)
+[LOG] [2019-07-16 17:31:37] Response Final Message Horas Mrs. Hafihd
+[LOG] [2019-07-16 17:32:03] Name Request Hafihd%!(EXTRA string=Wanita, string=Medan)
+[LOG] [2019-07-16 17:32:03] Response Final Message Horas Mrs. Hafihd
+[LOG] [2019-07-16 17:32:13] Name Request Hafihd%!(EXTRA string=Pria, string=Medan)
+[LOG] [2019-07-16 17:32:13] Response Final Message Horas Mr. Hafihd
+[LOG] [2019-07-16 17:32:21] Name Request Hafihd%!(EXTRA string=Pria, string=Jakarta)
+[LOG] [2019-07-16 17:32:21] Response Final Message Hi Mr. Hafihd
+[LOG] [2019-07-16 17:46:08] Name Request Hafihd%!(EXTRA string=Pria, string=Jakarta)
+[LOG] [2019-07-16 17:46:08] Response Final Message Hi Mr. Hafihd
+[LOG] [2019-07-16 17:46:16] Name Request Hafihd%!(EXTRA string=PrIa, string=Jakarta)
+[LOG] [2019-07-16 17:46:16] Response Final Message Hi Mrs. Hafihd
+[LOG] [2019-07-16 17:46:42] Name Request Hafihd%!(EXTRA string=PrIa, string=Jakarta)
+[LOG] [2019-07-16 17:46:42] Response Final Message 
+[LOG] [2019-07-16 17:47:11] Name Request Hafihd%!(EXTRA string=PrIa, string=Jakarta)
+[LOG] [2019-07-16 17:47:11] Response Final Message 
+[LOG] [2019-07-16 17:47:21] Name Request Hafihd%!(EXTRA string=Pria, string=Jakarta)
+[LOG] [2019-07-16 17:47:21] Response Final Message 
+[LOG] [2019-07-16 17:48:42] Name Request Hafihd%!(EXTRA string=pria, string=Jakarta)
+[LOG] [2019-07-16 17:48:42] Response Final Message 
+[LOG] [2019-07-16 17:49:16] Name Request Hafihd%!(EXTRA string=Pria, string=Jakarta)
+[LOG] [2019-07-16 17:49:16] Response Final Message 
+[LOG] [2019-07-16 17:50:01] Name Request Hafihd%!(EXTRA string=Pria, string=Jakarta)
+[LOG] [2019-07-16 17:50:02] Response Final Message Hi Mr. Hafihd
+[LOG] [2019-07-16 17:55:35] Name Request Hafihd%!(EXTRA string=Pria, string=Jakarta)
+[LOG] [2019-07-16 17:55:35] Response Final Message Hi Mrs. Hafihd
+[LOG] [2019-07-16 18:01:10] Name Request Hafihd%!(EXTRA string=Pria, string=Jakarta)
+[LOG] [2019-07-16 18:01:10] Response Final Message Hi Mr. Hafihd
+[LOG] [2019-07-16 18:01:20] Name Request Hafihd%!(EXTRA string=pria, string=Jakarta)
+[LOG] [2019-07-16 18:01:20] Response Final Message Hi Mr. Hafihd
+[LOG] [2019-07-16 18:01:29] Name Request Hafihd%!(EXTRA string=prIa, string=Jakarta)
+[LOG] [2019-07-16 18:01:29] Response Final Message Hi Mr. Hafihd
+[LOG] [2019-07-16 18:01:39] Name Request Hafihd%!(EXTRA string=waniTa, string=Jakarta)
+[LOG] [2019-07-16 18:01:39] Response Final Message Hi Mrs. Hafihd
+[LOG] [2019-07-16 18:20:25] Name Request Hafihd%!(EXTRA string=waniTa, string=jAkarta)
+[LOG] [2019-07-16 18:20:25] Response Final Message Hi Mrs. Hafihd
+[LOG] [2019-07-16 18:20:36] Name Request Hafihd%!(EXTRA string=waniTa, string=meDan)
+[LOG] [2019-07-16 18:20:36] Response Final Message Horas Mrs. Hafihd
+[LOG] [2019-07-16 19:49:39] Name Request Hafihd, waniTa, meDan
+[LOG] [2019-07-16 19:49:39] Response Final Message Horas Mrs. Hafihd
