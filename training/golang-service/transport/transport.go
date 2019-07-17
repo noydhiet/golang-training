@@ -23,15 +23,11 @@ type aphService struct{}
 
 var ErrEmpty = errors.New("empty string")
 
+// back service /Helloworld
 func (aphService) HelloWorldService(_ context.Context, name string) string {
 
 	return call_ServiceHelloWorld(name)
 }
-func (aphService) HelloDaerahService(_ context.Context, name, jenis_kelamin, asal_kota string) string {
-
-	return call_ServiceHelloDaerah(name, jenis_kelamin, asal_kota)
-}
-
 func call_ServiceHelloWorld(name string) string {
 
 	messageResponse := service.HelloWorld(name)
@@ -39,14 +35,6 @@ func call_ServiceHelloWorld(name string) string {
 	return messageResponse
 
 }
-func call_ServiceHelloDaerah(name, jenis_kelamin, asal_kota string) string {
-
-	messageResponse := service.HelloDaerah(name, jenis_kelamin, asal_kota)
-
-	return messageResponse
-
-}
-
 func makeHelloWorldEndpoint(aph AphService) endpoint.Endpoint {
 	return func(ctx context.Context, request interface{}) (interface{}, error) {
 		req := request.(datastruct.HelloWorldRequest)
@@ -55,6 +43,26 @@ func makeHelloWorldEndpoint(aph AphService) endpoint.Endpoint {
 		logging.Log(fmt.Sprintf("Response Final Message %s", v))
 		return datastruct.HelloWorldResponse{v}, nil
 	}
+}
+func decodeHelloWorldRequest(_ context.Context, r *http.Request) (interface{}, error) {
+	var request datastruct.HelloWorldRequest
+	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
+		return nil, err
+	}
+	return request, nil
+}
+
+// back service /HelloDaerah
+func (aphService) HelloDaerahService(_ context.Context, name, jenis_kelamin, asal_kota string) string {
+
+	return call_ServiceHelloDaerah(name, jenis_kelamin, asal_kota)
+}
+func call_ServiceHelloDaerah(name, jenis_kelamin, asal_kota string) string {
+
+	messageResponse := service.HelloDaerah(name, jenis_kelamin, asal_kota)
+
+	return messageResponse
+
 }
 func makeHelloDaerahEndpoint(aph AphService) endpoint.Endpoint {
 	return func(ctx context.Context, request interface{}) (interface{}, error) {
@@ -65,15 +73,6 @@ func makeHelloDaerahEndpoint(aph AphService) endpoint.Endpoint {
 		return datastruct.HelloDaerahResponse{200, z}, nil
 	}
 }
-
-func decodeHelloWorldRequest(_ context.Context, r *http.Request) (interface{}, error) {
-	var request datastruct.HelloWorldRequest
-	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
-		return nil, err
-	}
-	return request, nil
-}
-
 func decodeHelloDaerahRequest(_ context.Context, r *http.Request) (interface{}, error) {
 	var request datastruct.HelloDaerahRequest
 	if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
@@ -81,11 +80,11 @@ func decodeHelloDaerahRequest(_ context.Context, r *http.Request) (interface{}, 
 	}
 	return request, nil
 }
-
 func encodeResponse(_ context.Context, w http.ResponseWriter, response interface{}) error {
 	return json.NewEncoder(w).Encode(response)
 }
 
+//Register services /HelloWorld /HelloDaerah
 func RegisterHttpsServicesAndStartListener() {
 	aph := aphService{}
 
@@ -94,14 +93,11 @@ func RegisterHttpsServicesAndStartListener() {
 		decodeHelloWorldRequest,
 		encodeResponse,
 	)
-
-	http.Handle("/HelloWorld", HelloWorldHandler)
-
 	HelloDaerahHandler := httptransport.NewServer(
 		makeHelloDaerahEndpoint(aph),
 		decodeHelloDaerahRequest,
 		encodeResponse,
 	)
-
+	http.Handle("/HelloWorld", HelloWorldHandler)
 	http.Handle("/HelloDaerah", HelloDaerahHandler)
 }
