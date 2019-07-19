@@ -9,6 +9,7 @@ func HelloDaerah(name, sex, origin string) string {
 
 	if origin == "Jakarta" || origin == "jakarta" || origin == "JAKARTA" || origin == "JKT" || origin == "jkt" {
 		if sex == "Pria" || sex == "pria" || sex == "PRIA" {
+			helloOutput = fmt.Sprintf("Hi Mr. %s", name)
 		} else if sex == "Wanita" || sex == "wanita" || sex == "WANITA" {
 			helloOutput = fmt.Sprintf("Hi Ms. %s", name)
 		}
